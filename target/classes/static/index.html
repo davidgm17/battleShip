@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>BattleShip</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   </head>
+   <body>
+      <div class="container p-2 m-0 mw-100">
+         <div class="row mw-100 m-auto" id="resume"></div>
+         <div class="row mw-100 d-flex justify-content-around">
+            <div class="col-3  h-75 d-inline-block" id="log">
+            </div>
+            <div class="col-5  ">
+               <div class="row m-0 ">
+                  <H1 class="m-auto">Battle Ship</H1>
+               </div>
+               <div class="row m-0" id="launchBoard">
+               </div>
+               <div class="row m-0" id="userBoard">
+               </div>
+            </div>
+            <div class="col-3  ">
+               <div class="row m-0">
+                  <h3>Configuracion partida</h3>
+                  <form name="gameForm" class="w-100 py-3 d-flex flex-row flex-wrap">
+                  <label for="boardSize" class="col-8 p-0">Tamaño Tablero</label>
+                                       <div class="col-3 p-0">
+                                          <input class="form-control form-control-sm" type="number" id="boardSize" placeholder="10">
+                                       </div>
+                     <label for="Portaaviones" class="col-8 p-0">Portaaviones (size: 5)</label>
+                     <div class="col-3 p-0">
+                        <input class="form-control form-control-sm" type="number" id="Portaaviones" placeholder="1">
+                     </div>
+                     <label for="Cruceros" class="col-8 p-0">Cruceros (size: 4)</label>
+                     <div class="col-3 p-0">
+                        <input class="form-control form-control-sm" type="number" id="Cruceros" placeholder="2">
+                     </div>
+                     <label for="Destructores" class="col-8 p-0">Destructores (size: 3)</label>
+                     <div class="col-3 p-0">
+                        <input class="form-control form-control-sm" type="number" id="Destructores" placeholder="3">
+                     </div>
+                     <label for="Fragatas" class="col-8 p-0">Fragatas (size: 2)</label>
+                     <div class="col-3 p-0">
+                        <input class="form-control form-control-sm" type="number" id="Fragatas" placeholder="2">
+                     </div>
+                     <label for="Submarinos" class="col-8 p-0">Submarinos (size: 1)</label>
+                     <div class="col-3 p-0">
+                        <input class="form-control form-control-sm" type="number" id="Submarinos" placeholder="4">
+                     </div>
+                     <button type="button" class="btn btn-info btn-lg btn-block" onclick="startForm()">New Battle</button>
+                  </form>
+
+                   <button type="button" class="btn btn-info btn-lg btn-block" onclick="startQuickly()">Standar Battle</button>
+                  <button type="button" class="btn btn-warning  btn-lg btn-block" onclick="activarTrampas()">Activar Trampas</button>
+                  <input class="form-control" type="text" placeholder="Desactivadas" id="infoTrampas" readonly>
+               </div>
+               <div class="row m-0">
+                  <h3>Lanzar misil</h3>
+                  <form name="rocketForm" class="w-100 py-3">
+                     <label for="axisX" class="col">Eje X:</label>
+                     <div class="col">
+                        <input class="form-control form-control-sm" type="number" id="axisX" placeholder="0">
+                     </div>
+                     <label for="axisY" class="col">Eje Y:</label>
+                     <div class="col">
+                        <input class="form-control form-control-sm" type="number" id="axisY" placeholder="0">
+                     </div>
+                     <button type="button" class="btn btn-danger btn-lg btn-block" onclick="launchForm()">Shoot</button>
+                  </form>
+               </div>
+               <div class="row m-0">
+                  <h3>Imprimir estado actual partida</h3>
+                  <button type="button" class="btn btn-success btn-lg btn-block" onclick="getInfo()">Battle Status</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="js/index.js"></script>
+   </body>
+</html>
+
